@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "name": "Adib",
+      "username": "dibb",
+      "email": "adibbowo@gmail.com",
+      "address": "Denmark"
+    },
+    {
+      "name": "Mileano",
+      "username": "mill",
+      "email": "mill@gmail.com",
+      "address": "Denmark"
+    },
+    {
+      "name": "Topek",
+      "username": "pekk",
+      "email": "pekk@gmail.com",
+      "address": "Switzerland"
+    },
+    {
+      "name": "Dzakwan",
+      "username": "wann",
+      "email": "wann@gmail.com",
+      "address": "Belgia"
+    }
+  ]
+}
