@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Parent from './Komponen/parent';
+import Detail from './Komponen/detail';
 
 class App extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h2>Daftar Pemain Sepakbola</h2>
-          <Parent />
+          <Detail />
         </header>
       </div>
     );

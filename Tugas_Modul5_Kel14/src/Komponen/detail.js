@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import React from 'react';
-import Child1 from './child1';
+import Index from './index';
 
-class Parent extends Component {
+class Detail extends Component {
   state = {
     komponen1: false,
   };
@@ -15,7 +15,7 @@ class Parent extends Component {
   render() {
     return (
       <div>
-        {this.state.komponen1 ? <Child1 /> : ''}
+        {this.state.komponen1 ? <Index /> : ''}
         <button className="button bg-danger" onClick={this.ubahkomponen1}>
           {this.state.komponen1 ? 'Sembunyikan' : 'Tampilkan'} Database Pemain
         </button>
@@ -23,4 +23,4 @@ class Parent extends Component {
     );
   }
 }
-export default Parent;
+export default Detail;

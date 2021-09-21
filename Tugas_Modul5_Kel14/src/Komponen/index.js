@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Pemain from './Pemain/Pemain';
+import Pemain from './Pemain/Player';
 
-class child1 extends Component {
+class Index extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class child1 extends Component {
     );
   }
 }
-export default child1;
+export default Index;

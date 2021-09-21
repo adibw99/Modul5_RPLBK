@@ -61,6 +61,7 @@ export default class pemain extends Component {
     axios({
       method: 'get',
       url: 'http://localhost:3000/dataPemain',
+      // json-server --watch dataPemain.json
       headers: {
         accept: '*/*',
       },
