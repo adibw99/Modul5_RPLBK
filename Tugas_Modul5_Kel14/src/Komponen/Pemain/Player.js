@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
-import Modals from './Komponen/Modal/Index';
+import { useState } from 'react';
+
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import { render } from '@testing-library/react';
+
 const Tombol = styled.button`
   background: #5b5b5b;
   border-radius: 5px;
@@ -29,23 +34,20 @@ export default class pemain extends Component {
     };
   }
 
-  handleButton = (detail) => {
-    alert(detail);
-  };
   handleNama = (e) => {
-    this.setState({
+    this.useContext({
       nama: e.target.value,
     });
     console.log(this.state.nama);
   };
   handleTim = (e) => {
-    this.setState({
+    this.useContext({
       tim: e.target.value,
     });
     console.log(this.state.tim);
   };
   handleKebangsaan = (e) => {
-    this.setState({
+    this.useContext({
       kebangsaan: e.target.value,
     });
     console.log(this.state.kebangsaan);
@@ -88,31 +90,46 @@ export default class pemain extends Component {
                 <h5 className="card-subtitle mb-2 text-muted">Tim : {results.tim}</h5>
                 <h5 className="card-text text-black">Kebangsaan : {results.kebangsaan}</h5>
               </div>
-              <div className="modal hide fade">
-                <div className="modal-header">
-                  <button type="button" className="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                  </button>
-                  <h3>Modal header</h3>
-                </div>
-                <div className="modal-body">
-                  <p>One fine body…</p>
-                </div>
-                <div className="modal-footer">
-                  <a href="#" classclassName="button">
-                    Close
-                  </a>
-                  <a href="#" classclassName="button btn-primary">
-                    Save changes
-                  </a>
-                </div>
-              </div>
-              <Tombol onClick={() => this.handleButton(results.detail)}>Detail</Tombol>
-              <Modals />
+              <Player nama={results.nama} tim={results.tim} kebangsaan={results.kebangsaan} detail={results.detail} />;
             </div>
           );
         })}
       </div>
     );
   }
+}
+
+function Player(props) {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const { nama, tim, kebangsaan, detail } = props;
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Detail
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{nama}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Club : {tim}</p>
+          <p>Negara : {kebangsaan}</p>
+          <p>
+            Tentang : <br /> {detail}
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
 }
