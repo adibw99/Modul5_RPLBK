@@ -34,25 +34,25 @@ export default class pemain extends Component {
   }
 
   handleNama = (e) => {
-    this.useContext({
+    this.setState({
       nama: e.target.value,
     });
     console.log(this.state.nama);
   };
   handleTim = (e) => {
-    this.useContext({
+    this.setState({
       tim: e.target.value,
     });
     console.log(this.state.tim);
   };
   handleKebangsaan = (e) => {
-    this.useContext({
+    this.setState({
       kebangsaan: e.target.value,
     });
     console.log(this.state.kebangsaan);
   };
   handleDetail = (e) => {
-    this.useContext({
+    this.setState({
       detail: e.target.value,
     });
     console.log(this.state.detail);
@@ -84,7 +84,7 @@ export default class pemain extends Component {
         {this.state.pemain.map((results, index) => {
           return (
             <div className="card mb-2 " key={results._id}>
-              <div className="card-body ">
+              <div className="card-body">
                 <h5 className="card-title">Nama : {results.nama}</h5>
                 <h5 className="card-subtitle mb-2 text-muted">Tim : {results.tim}</h5>
                 <h5 className="card-text text-black">Kebangsaan : {results.kebangsaan}</h5>
@@ -104,32 +104,36 @@ function Player(props) {
   const handleShow = () => setShow(true);
   const { nama, tim, kebangsaan, detail } = props;
 
+  var userDetailContext = createContext(null);
+
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Detail
-      </Button>
+      <userDetailContext.Provider>
+        <Button variant="primary" onClick={handleShow}>
+          Detail
+        </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{nama}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>Club : {tim}</p>
-          <p>Negara : {kebangsaan}</p>
-          <p>
-            Tentang : <br /> {detail}
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>{nama}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>Club : {tim}</p>
+            <p>Negara : {kebangsaan}</p>
+            <p>
+              Tentang : <br /> {detail}
+            </p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </userDetailContext.Provider>
     </>
   );
 }
