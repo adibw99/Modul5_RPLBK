@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
-import { useState } from 'react';
-
+import { useState, useContext, createContext } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { render } from '@testing-library/react';
@@ -104,6 +103,7 @@ function Player(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { nama, tim, kebangsaan, detail } = props;
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
