@@ -1,0 +1,58 @@
+{
+  "dataPemain": [
+    {
+      "nama": "Cristiano Ronaldo",
+      "tim": "Juventus",
+      "kebangsaan": "Portugal",
+      "detail": "Cristiano Ronaldo dos Santos Aveiro GOIH ComM (lahir 5 Februari 1985) adalah seorang pemain sepak bola profesional asal Portugal yang bermain sebagai penyerang untuk klub Liga Utama Inggris, Manchester United dan juga kapten untuk tim nasional Portugal."
+    },
+    {
+      "nama": "Luis Suarez",
+      "tim": "Atletico Madrid",
+      "kebangsaan": "Uruguay",
+      "detail": "Luis Alberto Suárez Díaz (lahir 24 Januari 1987) adalah seorang legenda striker FC Barcelona dia sudah meraih trofi UEFA Champions league,dan juga pencetak gol terbanyak kedua sepanjang sejarah FC Barcelona"
+    },
+    {
+      "nama": "Sergio Ramos",
+      "tim": "Real Madrid",
+      "kebangsaan": "Spanyol",
+      "detail": "Sergio Ramos (lahir 30 Maret 1986) merupakan seorang pemain sepak bola asal Spanyol yang bermain untuk klub Paris Saint-German pada posisi bek tengah. Ia dikenal khalayak luas sebagai bek Real Madrid selama 16 musim"
+    },
+    {
+      "nama": "Robert Lewandowski",
+      "tim": "Bayern Munich",
+      "kebangsaan": "Polandia",
+      "detail": "Robert Lewandowski (lahir 21 Agustus 1988) adalah pemain sepak bola Polandia yang bermain sebagai penyerang pada klub Bundesliga Jerman, Bayern Munich dan merupakan kapten tim nasional Polandia."
+    },
+    {
+      "nama": "Sadio Mane",
+      "tim": "Liverpool",
+      "kebangsaan": "Senegal",
+      "detail": "Sadio Mané (lahir 10 April 1992) adalah pemain sepak bola profesional Senegal yang bermain sebagai gelandang sayap untuk klub Premier League Liverpool dan tim nasional Senegal."
+    },
+    {
+      "nama": "Paulo Dybala",
+      "tim": "Juventus",
+      "kebangsaan": "Argentina",
+      "detail": "Paulo Bruno Exequiel Dybala (lahir 15 November 1993) adalah seorang pemain sepak bola berkewarganegaraan Argentina yang bermain untuk klub Juventus biasa bermain pada posisi penyerang. Ia memiliki nama panggilan La Joya. Permainannya dianggap seperti penyerang Argentina Sergio Agüero atau penyerang Italia Vincenzo Montella."
+    },
+    {
+      "nama": "Ivan Perisic",
+      "tim": "Chelsea",
+      "kebangsaan": "Amerika Serikat",
+      "detail": "Ivan Perišić (lahir 2 Februari 1989) adalah seorang pemain sepak bola berkewarganegaraan Kroasia yang bermain untuk klub Internazionale Milano pada posisi gelandang."
+    },
+    {
+      "nama": "Oscar",
+      "tim": "Guangzhou Evergrande",
+      "kebangsaan": "Brazil",
+      "detail": "Oscar dos Santos Emboaba Júnior (lahir 9 September 1991) atau lebih dikenal sebagai Oscar, adalah seorang pemain sepak bola asal Brasil yang bermain untuk klub Shanghai SIPG dan tim nasional Brasil. Ia biasa bermain sebagai seorang gelandang serang dan dapat pula bermain sebagai gelandang sayap."
+    },
+    {
+      "nama": "Lionel Messi",
+      "tim": "Barcelona",
+      "kebangsaan": "Argentina",
+      "detail": "Lionel Andrés Messi juga dikenal sebagai Leo Messi,(lahir 24 Juni 1987) adalah seorang pemain sepak bola profesional asal Argentina yang bermain sebagai penyerang untuk klub Ligue 1 Paris Saint-Germain dan merupakan kapten tim nasional Argentina."
+    }
+  ]
+}

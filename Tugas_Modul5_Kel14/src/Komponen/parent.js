@@ -1,0 +1,26 @@
+import { Component } from 'react';
+import React from 'react';
+import Child1 from './child1';
+
+class Parent extends Component {
+  state = {
+    komponen1: false,
+  };
+  ubahkomponen1 = () => {
+    this.setState((state) => {
+      return { komponen1: !this.state.komponen1 };
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        {this.state.komponen1 ? <Child1 /> : ''}
+        <button className="button bg-danger" onClick={this.ubahkomponen1}>
+          {this.state.komponen1 ? 'Sembunyikan' : 'Tampilkan'} Database Pemain
+        </button>
+      </div>
+    );
+  }
+}
+export default Parent;
