@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
-
+import Modals from './Komponen/Modal/Index';
 const Tombol = styled.button`
   background: #5b5b5b;
   border-radius: 5px;
@@ -88,7 +88,27 @@ export default class pemain extends Component {
                 <h5 className="card-subtitle mb-2 text-muted">Tim : {results.tim}</h5>
                 <h5 className="card-text text-black">Kebangsaan : {results.kebangsaan}</h5>
               </div>
+              <div className="modal hide fade">
+                <div className="modal-header">
+                  <button type="button" className="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                  </button>
+                  <h3>Modal header</h3>
+                </div>
+                <div className="modal-body">
+                  <p>One fine body…</p>
+                </div>
+                <div className="modal-footer">
+                  <a href="#" classclassName="button">
+                    Close
+                  </a>
+                  <a href="#" classclassName="button btn-primary">
+                    Save changes
+                  </a>
+                </div>
+              </div>
               <Tombol onClick={() => this.handleButton(results.detail)}>Detail</Tombol>
+              <Modals />
             </div>
           );
         })}
