@@ -1,24 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
-import styled from 'styled-components';
-import { useState, useContext, createContext } from 'react';
+import { useState, createContext } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import { render } from '@testing-library/react';
-
-const Tombol = styled.button`
-  background: #5b5b5b;
-  border-radius: 5px;
-  border: none;
-  color: black;
-  margin: 16px;
-  font-size: 18px;
-  &:hover {
-    border: solid 2px #008b8b;
-    cursor: pointer;
-  }
-`;
 
 export default class pemain extends Component {
   constructor(props) {
